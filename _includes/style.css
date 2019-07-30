@@ -1,0 +1,71 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  --blue: #1d7cbb;
+
+  display: grid;
+  place-items: center;
+  color: #333;
+  line-height: 1.5;
+  font-size: 100%;
+  font-family: sans-serif;
+  background: var(--blue);
+}
+
+main {
+  width: 38em;
+  max-width: calc(100vw - 5em);
+  padding: 2em;
+  margin: 1em auto;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+h1 {
+  font-size: 1.375em;
+  text-transform: uppercase;
+  margin: 0 0 0.125em;
+}
+
+h2 {
+  font-size: 1.125em;
+  margin: 0 0 0.5em;
+}
+
+a {
+  color: var(--blue);
+}
+
+.container {
+  max-width: 26em;
+  margin: 0 auto;
+}
+
+.profileImg {
+  border-radius: 50%;
+  width: 7.5em;
+  margin: -5.75em 0 1em;
+}
+
+.cta {
+  display: block;
+  background: var(--blue);
+  color: #fff;
+  padding: 0.75em;
+  margin: 1em;
+  border-radius: 0.25em;
+  text-decoration: none;
+  text-shadow: 0 0.5px 1px #003c7b;
+}
