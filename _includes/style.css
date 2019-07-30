@@ -13,6 +13,7 @@ html {
 
 body {
   --blue: #1d7cbb;
+  --blue-light: #4dbcfb;
 
   display: grid;
   place-items: center;
@@ -68,4 +69,8 @@ a {
   border-radius: 0.25em;
   text-decoration: none;
   text-shadow: 0 0.5px 1px #003c7b;
+}
+
+.cta:hover {
+  background: var(--blue-light);
 }
