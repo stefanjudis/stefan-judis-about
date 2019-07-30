@@ -12,7 +12,11 @@
 
 <body>
   <main>
-    <img class="profileImg" src="{{ me.fields.profilePhoto.fields.file.url }}">
+    <img class="profileImg"
+      src="{{ me.fields.profilePhoto.fields.file.url }}?w=120"
+      srcset="{{ me.fields.profilePhoto.fields.file.url }}?w=120,
+             {{ me.fields.profilePhoto.fields.file.url }}?w=180 1.5x,
+             {{ me.fields.profilePhoto.fields.file.url }}?w=240 2x">
     <h1>{{ me.fields.name  }}</h1>
     <h2>{{ me.fields.title }}</h2>
     <div class="container">
