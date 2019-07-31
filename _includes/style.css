@@ -28,7 +28,7 @@ main {
   width: 38em;
   max-width: calc(100vw - 5em);
   padding: 2em;
-  margin: 1em auto;
+  margin: 5em auto 1em;
   text-align: center;
   background-color: #fff;
   border-radius: 4px;
