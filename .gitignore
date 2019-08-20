@@ -62,3 +62,6 @@ typings/
 
 # eleventy stuff
 _site
+
+# netlify stuff
+.netlify
