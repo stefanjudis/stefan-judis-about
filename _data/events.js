@@ -9,6 +9,6 @@ module.exports = async function() {
     content_type: process.env.CTF_EVENT_ID,
     limit: 1000
   });
-  console.log(events.filter(event => !!event.fields.slug));
+
   return events.filter(event => !!event.fields.slug);
 };
