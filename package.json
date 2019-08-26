@@ -13,7 +13,9 @@
   ],
   "author": "stefan judis <stefanjudis@gmail.com>",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "twilio": "^3.33.3"
+  },
   "devDependencies": {
     "@11ty/eleventy": "^0.8.3",
     "autoprefixer": "^9.6.1",

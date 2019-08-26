@@ -1,0 +1,10 @@
+---
+layout: layouts/base.njk
+pagination:
+  alias: event
+  data: events
+  size: 1
+permalink: at/{{ event.fields.slug }}/index.html
+---
+
+{{event.fields.name}}

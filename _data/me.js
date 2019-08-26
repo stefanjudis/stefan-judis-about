@@ -5,7 +5,6 @@ const client = createClient({
 });
 
 module.exports = async function() {
-  const me = await client.getEntry('5JQ715oDQW68k8EiEuKOk8');
-  // console.log(me.fields.profilePhoto.fields);
+  const me = await client.getEntry(process.env.CTF_PERSON_ID);
   return me;
 };

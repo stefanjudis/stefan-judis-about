@@ -74,3 +74,9 @@ a {
 .cta:hover {
   background: var(--blue-light);
 }
+
+.chat {
+  position: absolute;
+  bottom: 2em;
+  right: 2em;
+}

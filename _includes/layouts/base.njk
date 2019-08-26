@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+{% set css %}
+  {% include "inline/style.css" %}
+{% endset %}
+<style>
+  {{ css | autoprefixer | cssmin | safe }}
+</style>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="Say HI at all the events... :)">
+<head>
+  <title>{{ title }}</title>
+</head>
+
+<body>
+  <main>
+    <img class="profileImg"
+      src="{{ me.fields.profilePhoto.fields.file.url }}?w=120"
+      srcset="{{ me.fields.profilePhoto.fields.file.url }}?w=120,
+             {{ me.fields.profilePhoto.fields.file.url }}?w=180 1.5x,
+             {{ me.fields.profilePhoto.fields.file.url }}?w=240 2x"
+      alt="Stefan Judis looking at a screen">
+    <h1>{{ me.fields.name  }}</h1>
+    <h2>{{ me.fields.title }}</h2>
+    <div class="container">
+      {% if event %}
+        <a class="cta" href="">Say hi at {{ event.fields.name }}!</a>
+      {% else %}
+        <a class="cta" href="">Say hi 👋!</a>
+      {% endif %}
+
+      <p>{{ me.fields.biography | markdown | safe }}</p>
+
+      <ul>
+        <li><a href="{{ me.fields.twitterProfile }}">Stefan on Twitter</a></li>
+        <li><a href="{{ me.fields.githubProfile }}">Stefan on GitHub</a></li>
+        <li><a href="{{ me.fields.website }}">Stefan's blog</a></li>
+      </ul>
+    </div>
+  </main>
+
+    {# <div class="chat">
+      <form action="/.netlify/functions/token" id="chat-register-form">
+        <input id="chat-register-form-email" type="email" required value="stefanjudis@gmail.com">
+        <button>sign me up</button>
+      </form>
+
+      <div id="chat-conversation" class="chatty" hidden>
+        <ul id="chat-conversation-messages"></ul>
+        <form id="chat-conversation-form">
+          <input id="chat-conversation-input">
+          <button>send</button>
+        </form>
+      </div>
+
+      <button id="chat-start-btn" type="button">Start chat</button>
+    </div>
+
+    <script src="https://media.twiliocdn.com/sdk/js/chat/v3.3/twilio-chat.min.js"></script>
+    {% set js %}
+      {% include "inline/script.js" %}
+    {% endset %}
+    <script>{{ js | safe }}</script> #}
+</body>
+
+</html>
