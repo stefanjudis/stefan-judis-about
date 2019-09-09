@@ -35,9 +35,9 @@
     <p><a href="https://www.twilio.com/">Twilio</a> enables you to build the future of communications</p>
     <div class="container">
       {% if event %}
-        <a class="cta" href="">Say "Hi" 👋 at {{ event.fields.name }}!</a>
+        <a class="cta" href="mailto:sjudis@twilio.com">Say "Hi" 👋 at {{ event.fields.name }}!</a>
       {% else %}
-        <a class="cta" href="">Say "Hi" 👋!</a>
+        <a class="cta" href="mailto:sjudis@twilio.com">Say "Hi" 👋!</a>
       {% endif %}
 
       <p>{{ me.fields.biography | markdown | safe }}</p>
