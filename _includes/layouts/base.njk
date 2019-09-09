@@ -1,16 +1,25 @@
 <!doctype html>
 <html lang="en">
-{% set css %}
-  {% include "inline/style.css" %}
-{% endset %}
-<style>
-  {{ css | autoprefixer | cssmin | safe }}
-</style>
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex,nofollow">
-<meta name="description" content="Say HI at all the events... :)">
 <head>
+  {% set css %}
+    {% include "inline/style.css" %}
+  {% endset %}
+  <style>
+    {{ css | autoprefixer | cssmin | safe }}
+  </style>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="Say HI at all the events... :)">
   <title>{{ title }}</title>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-147257088-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-147257088-1');
+  </script>
 </head>
 
 <body>
