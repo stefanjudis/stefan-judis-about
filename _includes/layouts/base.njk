@@ -32,12 +32,13 @@
       alt="Stefan Judis looking at a screen">
     <h1>{{ me.fields.name  }}</h1>
     <h2>{{ me.fields.title }}</h2>
+    <img class="third" src="/img/twilio.png" alt="Twilio logo" >
     <p><a href="https://www.twilio.com/">Twilio</a> enables you to build the future of communications</p>
     <div class="container">
       {% if event %}
-        <a class="cta" href="mailto:sjudis@twilio.com">Say "Hi" 👋 at {{ event.fields.name }}!</a>
+        <a class="cta" href="mailto:sjudis@twilio.com?subject=Heyo from {{ event.fields.name }}">Say "Hi" 👋 at {{ event.fields.name }}!</a>
       {% else %}
-        <a class="cta" href="mailto:sjudis@twilio.com">Say "Hi" 👋!</a>
+        <a class="cta" href="mailto:sjudis@twilio.com?subject=Heyo from {{ event.fields.name }}">Say "Hi" 👋!</a>
       {% endif %}
 
       <p>{{ me.fields.biography | markdown | safe }}</p>

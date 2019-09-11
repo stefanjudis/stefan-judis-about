@@ -27,4 +27,10 @@ module.exports = function(eleventyConfig) {
         callback(null, result.css);
       });
   });
+
+  eleventyConfig.addPassthroughCopy('img');
+
+  return {
+    passthroughFileCopy: true
+  };
 };
