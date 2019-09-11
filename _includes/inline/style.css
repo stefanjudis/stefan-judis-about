@@ -49,6 +49,31 @@ a {
   color: var(--blue);
 }
 
+.social-list {
+  margin: 2em 0 0;
+  padding: 0;
+}
+
+.social-list > li {
+  display: inline-block;
+  margin: 0 .5em;
+  text-align: center;
+}
+
+.social-list svg {
+  display: block;
+  margin: .5em auto .25em;
+}
+
+img {
+  max-width: 100%;
+}
+
+.third {
+  width: 33%;
+  margin: 0 auto;
+}
+
 .container {
   max-width: 26em;
   margin: 0 auto;
