@@ -22,6 +22,6 @@
     "clean-css": "^4.2.1",
     "contentful": "^7.8.2",
     "markdown-it": "^9.0.1",
-    "postcss": "^7.0.17"
+    "postcss": "^8.2.10"
   }
 }
